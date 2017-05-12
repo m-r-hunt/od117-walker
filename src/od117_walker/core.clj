@@ -104,7 +104,9 @@
   [[key {:keys [links author]}]]
   (apply str
          (apply str (map #(str \" key \" " -> " \" % \" ";\n") links))
-         \" key \" " " "[color=" (get author-colours author) ",style=filled];\n"))
+         (if-let [colour (get author-colours author)]
+           (str \" key \" " " "[color=" colour ",style=filled];\n")
+           "")))
 
 (defn graphify
   "Convert a map representation of the graph into a string of graphviz dot language."
@@ -125,4 +127,4 @@
   "Calculate and print the graph of OD-117 to foo.dot."
   [& args]
   (with-open [wrtr (io/writer "foo.dot")]
-    (.write wrtr (graphify (walk start-points (conj authors "/redacted"))))))
+    (.write wrtr (graphify (walk start-points authors)))))
