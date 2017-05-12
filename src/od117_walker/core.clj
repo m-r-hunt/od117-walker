@@ -4,11 +4,14 @@
             [clj-http.client :as client]
             [pl.danieljanus.tagsoup :as ts]))
 
+;; Base address of wiki to walk.
+(def wiki-address "http://od117.wikidot.com/")
+
 (defn find-and-parse-page
   "Download the given wiki page and run it through the parser."
   [page]
   (->> page
-       (str "http://od117.wikidot.com/")
+       (str wiki-address)
        (client/get)
        (:body)
        (ts/parse-string)))
@@ -91,13 +94,15 @@
                    out))))
       out)))
 
+;; Colours used for different author's bubbles.
+;; Manually chosen for maximum style.
 (def author-colours {"/catalogatrix-maridia" "aquamarine"
                      "/isabella-yutani" "brown1"
                      "/john-9eb99c7f-e482-492f-8807-dc6f208b5c60" "burlywood1"
                      "/major-kaspar-parmenides" "cadetblue1"
                      "/prof-cuthburt-robinson-smithe" "chocolate1"
                      "/qitik-von-gratzk" "darkorchid2"
-                     "/research-droid-8608c29d-d2e6-441e-9d6c-edaf932a7e82" "darkslategray1"})
+                     "/research-droid-8608c29d-d2e6-441e-9d6c-edaf932a7e82" "forestgreen"})
 
 (defn graphify-one
   "Create graphviz dot language entries for given graph node (in internal map format)."
