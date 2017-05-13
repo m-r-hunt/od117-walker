@@ -117,7 +117,9 @@
   "Convert a map representation of the graph into a string of graphviz dot language."
   [g]
   (let [vals (map graphify-one (seq g))]
-    (apply str "digraph G {" (apply str vals) "}")))
+    (str "digraph G {\n"
+         (apply str vals)
+         "}")))
 
 ;; Start points that will ensure we hit the whole graph.
 ;; Manually entered, a little bit of a hack.
