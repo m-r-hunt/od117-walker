@@ -84,7 +84,7 @@
           (println next)
           (if-let [next-para (try
                                (find-id (find-and-parse-page next) "page-content")
-                               (catch Exception e nil))]
+                               (catch Exception e nil))] ;; This is necessary as the http request will throw exceptions on 404, and some pages aren't written.
             (recur (concat (rest to-check) (extract-links next-para))
                    (conj visited next)
                    (assoc out next {:links (extract-links next-para)
@@ -107,8 +107,7 @@
 (defn graphify-one
   "Create graphviz dot language entries for given graph node (in internal map format)."
   [[key {:keys [links]}]]
-  (apply str (map #(str \" key \" " -> " \" % \" ";\n") links))
-  )
+  (apply str (map #(str \" key \" " -> " \" % \" ";\n") links)))
 
 (defn node-def
   [[key {:keys [author]}]]
@@ -172,5 +171,8 @@
 (defn -main
   "Calculate and print the graph of OD-117 to foo.dot."
   [& args]
-  (with-open [wrtr (io/writer "foo.dot")]
-    (.write wrtr (graphify-ranked (walk start-points authors)))))
+  (let [g (walk start-points authors)]
+    (with-open [wrtr (io/writer "ranked.dot")]
+      (.write wrtr (graphify-ranked g)))
+    (with-open [wrtr (io/writer "general.dot")]
+      (.write wrtr (graphify-unordered g)))))

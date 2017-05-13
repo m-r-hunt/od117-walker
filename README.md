@@ -8,6 +8,7 @@ Needs Clojure/Lein and graph-viz.
 
 To generate:
 ```
-lein run # Dumps output to foo.dot
-dot -Tpng .\foo.dot -o"foo.png"
+lein run
+dot -Tpng ranked.dot -o"ranked.png"
+dot -Tpng general.dot -o"general.png"
 ```
