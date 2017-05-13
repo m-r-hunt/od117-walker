@@ -106,20 +106,59 @@
 
 (defn graphify-one
   "Create graphviz dot language entries for given graph node (in internal map format)."
-  [[key {:keys [links author]}]]
-  (apply str
-         (apply str (map #(str \" key \" " -> " \" % \" ";\n") links))
-         (if-let [colour (get author-colours author)]
-           (str \" key \" " " "[color=" colour ",style=filled];\n")
-           "")))
+  [[key {:keys [links]}]]
+  (apply str (map #(str \" key \" " -> " \" % \" ";\n") links))
+  )
 
-(defn graphify
+(defn node-def
+  [[key {:keys [author]}]]
+  (str \" key \"
+       (if-let [colour (get author-colours author)]
+         (str " [color=" colour ",style=filled]")
+         "")
+       ";\n"))
+
+(def turns [#{\a \b \c}
+            #{\d \e \f}
+            #{\g \h \i}
+            #{\j \k \l}
+            #{\m \n \o}
+            #{\p \q}
+            #{\r \s}
+            #{\t \u \v}
+            #{\w \x \y \z}])
+
+(defn make-turn
+  [turn decls]
+  (let [turn-decls (filter #(turn (nth % 2)) decls)]
+    (str "{ rank=same;\n"
+         (str (apply str (sort turn)) ";\n")
+         (apply str turn-decls)
+         "}\n")))
+
+(defn make-order
+  []
+  (str (apply str (interpose "->" (map #(apply str (sort %)) turns))) ";\n"))
+
+(defn graphify-ranked
   "Convert a map representation of the graph into a string of graphviz dot language."
   [g]
-  (let [vals (map graphify-one (seq g))]
+  (let [decls (map #(make-turn % (map node-def (seq g))) turns) 
+        vals (map graphify-one (seq g))]
     (str "digraph G {\n"
+         (make-order)
+         (apply str decls)
          (apply str vals)
-         "}")))
+         "}\n")))
+
+(defn graphify-unordered
+  [g]
+  (let [decls (map node-def (seq g))
+        vals (map graphify-one (seq g))]
+    (str "digraph G {\n"
+         (apply str decls)
+         (apply str vals)
+         "}\n")))
 
 ;; Start points that will ensure we hit the whole graph.
 ;; Manually entered, a little bit of a hack.
@@ -134,4 +173,4 @@
   "Calculate and print the graph of OD-117 to foo.dot."
   [& args]
   (with-open [wrtr (io/writer "foo.dot")]
-    (.write wrtr (graphify (walk start-points authors)))))
+    (.write wrtr (graphify-ranked (walk start-points authors)))))
