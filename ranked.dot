@@ -65,11 +65,28 @@ rs;
 }
 { rank=same;
 tuv;
+"/untouchable-axo";
+"/upper-slipstream-currents";
 "/venomdrake" [color=aquamarine,style=filled];
+"/viscerpion";
+"/ulcerous-leaping-sheep";
 "/the-monstrous-thing";
+"/voctarion-plasma";
+"/terravores";
 }
 { rank=same;
 wxyz;
+"/xeric-crows";
+"/zalfar-dilsk";
+"/wisp";
+"/welond";
+"/zandrashu";
+"/yesterflies";
+"/yellow-stasis-tree";
+"/whaletitans";
+"/white-phoenix";
+"/xylanite";
+"/zkovsky-expedition";
 }
 "/lunar-formations" -> "/firespout-mountains";
 "/lunar-formations" -> "/xeric-crows";
