@@ -91,7 +91,7 @@
                                     :author (extract-author next-para)}))
             (recur (rest to-check)
                    (conj visited next)
-                   out))))
+                   (assoc out next {})))))
       out)))
 
 ;; Colours used for different author's bubbles.
