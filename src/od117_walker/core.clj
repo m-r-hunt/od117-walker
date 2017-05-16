@@ -172,7 +172,7 @@
   "Calculate and print the graph of OD-117 to foo.dot."
   [& args]
   (let [g (walk start-points authors)]
-    (with-open [wrtr (io/writer "ranked.dot")]
+    (with-open [wrtr (io/writer "output/ranked.dot")]
       (.write wrtr (graphify-ranked g)))
-    (with-open [wrtr (io/writer "general.dot")]
+    (with-open [wrtr (io/writer "output/general.dot")]
       (.write wrtr (graphify-unordered g)))))
