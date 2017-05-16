@@ -4,6 +4,8 @@
             [clj-http.client :as client]
             [pl.danieljanus.tagsoup :as ts]))
 
+;; TODO: Parameterise all data in defs, add code to read it from a config file. This will allow this program to be reused for future wikis.
+
 ;; Base address of wiki to walk.
 (def wiki-address "http://od117.wikidot.com/")
 
@@ -53,6 +55,7 @@
           #{}
           (ts/children html)))
 
+;; TODO: Refactor these 2 functions as they are copy/pasted.
 (defn extract-author
   "Extract the author of the entry from the html. Assumes there is only one author linked."
   [html]
@@ -110,6 +113,7 @@
   (apply str (map #(str \" key \" " -> " \" % \" ";\n") links)))
 
 (defn node-def
+  "Build a node definition for a given graph node. Form: <quoted-name> [color=<colour>,style=filled];\n. Omits colour/filled if no author given."
   [[key {:keys [author]}]]
   (str \" key \"
        (if-let [colour (get author-colours author)]
@@ -117,6 +121,7 @@
          "")
        ";\n"))
 
+;; Turn order. Manually transcribed from wiki.
 (def turns [#{\a \b \c}
             #{\d \e \f}
             #{\g \h \i}
@@ -128,6 +133,7 @@
             #{\w \x \y \z}])
 
 (defn make-turn
+  "Given a paticular turn (as a set) and a list of declarations, extract the declarations for that turn and build a ranked subgraph for them."
   [turn decls]
   (let [turn-decls (filter #(turn (nth % 2)) decls)]
     (str "{ rank=same;\n"
@@ -136,11 +142,12 @@
          "}\n")))
 
 (defn make-order
+  "Make a subgraph for the turn ordering."
   []
   (str (apply str (interpose "->" (map #(apply str (sort %)) turns))) ";\n"))
 
 (defn graphify-ranked
-  "Convert a map representation of the graph into a string of graphviz dot language."
+  "Convert a map representation of the graph into a string of graphviz dot language. Use a turn order to create a tiered graph."
   [g]
   (let [decls (map #(make-turn % (map node-def (seq g))) turns) 
         vals (map graphify-one (seq g))]
@@ -151,6 +158,7 @@
          "}\n")))
 
 (defn graphify-unordered
+  "Convert a map representation of the graph into a string of graphviz dot language. Just let dot do whatever its heart tells it."
   [g]
   (let [decls (map node-def (seq g))
         vals (map graphify-one (seq g))]
@@ -169,7 +177,7 @@
                    "/mendacious-islands"])
 
 (defn -main
-  "Calculate and print the graph of OD-117 to foo.dot."
+  "Calculate and print graphs of OD-117 to ranked.dot and general.dot."
   [& args]
   (let [g (walk start-points authors)]
     (with-open [wrtr (io/writer "ranked.dot")]
