@@ -32,7 +32,7 @@ digraph G {
 "/rece" [color=chocolate1,style=filled];
 "/languid-plelm" [color=brown1,style=filled];
 "/interagile-ocean" [color=cadetblue1,style=filled];
-"/ulcerous-leaping-sheep";
+"/ulcerous-leaping-sheep" [color=cadetblue1,style=filled];
 "/quadratic-fungus" [color=chocolate1,style=filled];
 "/rust-cats" [color=darkorchid2,style=filled];
 "/euclidiocite" [color=cadetblue1,style=filled];
@@ -57,7 +57,7 @@ digraph G {
 "/caseinogenic-blood-rose" [color=cadetblue1,style=filled];
 "/xylanite";
 "/voctarion-plasma";
-"/terravores";
+"/terravores" [color=burlywood1,style=filled];
 "/zkovsky-expedition";
 "/screaming-catrabbit" [color=burlywood1,style=filled];
 "/aardvark" [color=chocolate1,style=filled];
@@ -179,6 +179,9 @@ digraph G {
 "/keening-seal" -> "/onami";
 "/caseinogenic-blood-rose" -> "/igneous-jet-wasp";
 "/caseinogenic-blood-rose" -> "/screaming-catrabbit";
+"/terravores" -> "/viscerpion";
+"/terravores" -> "/euclidiocite";
+"/terravores" -> "/parasumatra";
 "/screaming-catrabbit" -> "/yellow-stasis-tree";
 "/screaming-catrabbit" -> "/gullible-apes";
 "/screaming-catrabbit" -> "/parasumatra";
