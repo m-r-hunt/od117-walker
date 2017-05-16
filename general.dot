@@ -20,6 +20,7 @@ digraph G {
 "/venomdrake" [color=aquamarine,style=filled];
 "/petigrew-tree-rabbits" [color=brown1,style=filled];
 "/welond";
+"/weylond";
 "/quentel-yellow-grass" [color=burlywood1,style=filled];
 "/noxious-snow-cactus" [color=brown1,style=filled];
 "/grazing-humdingers" [color=chocolate1,style=filled];
@@ -42,7 +43,7 @@ digraph G {
 "/depths-of-anguish" [color=burlywood1,style=filled];
 "/whaletitans";
 "/elegiac-penguins" [color=aquamarine,style=filled];
-"/the-monstrous-thing";
+"/the-monstrous-thing" [color=chocolate1,style=filled];
 "/onami" [color=burlywood1,style=filled];
 "/gullible-apes" [color=brown1,style=filled];
 "/knox-tree" [color=burlywood1,style=filled];
@@ -149,6 +150,9 @@ digraph G {
 "/elegiac-penguins" -> "/crystal-trees";
 "/elegiac-penguins" -> "/parasumatra";
 "/elegiac-penguins" -> "/manxomesnatch";
+"/the-monstrous-thing" -> "/iso-ph-synoptic-cycles";
+"/the-monstrous-thing" -> "/effervescent-wilderness";
+"/the-monstrous-thing" -> "/weylond";
 "/onami" -> "/lunar-formations";
 "/onami" -> "/soeh-of-the-deep";
 "/onami" -> "/silicone-razer-bell";
