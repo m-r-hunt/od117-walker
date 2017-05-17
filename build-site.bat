@@ -2,6 +2,8 @@
 
 if not exist "output" mkdir output
 
+cp static/* output
+
 call lein run
 
 dot -Tpng .\output\ranked.dot -o"output/ranked.png"

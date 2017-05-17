@@ -2,6 +2,8 @@
 
 mkdir -p output
 
+cp static/* output
+
 lein run
 
 dot -Tpng ./output/ranked.dot -o"output/ranked.png"

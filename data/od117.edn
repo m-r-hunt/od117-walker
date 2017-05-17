@@ -1,0 +1,30 @@
+{:wiki-address "http://od117.wikidot.com/"
+ :authors #{"/catalogatrix-maridia"
+            "/isabella-yutani"
+            "/john-9eb99c7f-e482-492f-8807-dc6f208b5c60"
+            "/major-kaspar-parmenides"
+            "/prof-cuthburt-robinson-smithe"
+            "/qitik-von-gratzk"
+            "/research-droid-8608c29d-d2e6-441e-9d6c-edaf932a7e82"}
+ :author-colours {"/catalogatrix-maridia" "aquamarine"
+                  "/isabella-yutani" "brown1"
+                  "/john-9eb99c7f-e482-492f-8807-dc6f208b5c60" "burlywood1"
+                  "/major-kaspar-parmenides" "cadetblue1"
+                  "/prof-cuthburt-robinson-smithe" "chocolate1"
+                  "/qitik-von-gratzk" "darkorchid2"
+                  "/research-droid-8608c29d-d2e6-441e-9d6c-edaf932a7e82" "forestgreen"}
+ :turns [#{\a \b \c}
+         #{\d \e \f}
+         #{\g \h \i}
+         #{\j \k \l}
+         #{\m \n \o}
+         #{\p \q}
+         #{\r \s}
+         #{\t \u \v}
+         #{\w \x \y \z}]
+ :start-points ["/caseinogenic-blood-rose"
+                "/anachronistic-shrubs"
+                "/depths-of-anguish"
+                "/euclidiocite"
+                "/lesser-spotted-rampike-owl"
+                "/mendacious-islands"]}
