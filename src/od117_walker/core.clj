@@ -6,8 +6,7 @@
             [clj-http.client :as client]
             [pl.danieljanus.tagsoup :as ts]))
 
-;; TODO: Reduce amount of data needed by either: scraping it from the wiki (authors, start points) or generating automatically (author-colours).
-;;       Also consider whether or not dynamic variables are a good idea, probably should just pass stuff down but this was an easy way to replace hardcoded data.
+;; TODO: Refactor to get rid of dynamic variables.
 
 ;; Dynamic variables, need to be bound for code to work.
 
@@ -24,9 +23,7 @@
 ;; Turn order. Manually transcribed from wiki.
 (def ^:dynamic *turns*)
 
-;; Start points that will ensure we hit the whole graph.
-;; Manually entered, a little bit of a hack.
-(def ^:dynamic *start-points*)
+(def colours ["aquamarine" "brown1" "burlywood1" "cadetblue1" "chocolate1" "darkorchid2" "forestgreen"])
 
 (defn find-and-parse-page
   "Download the given wiki page and run it through the parser."
@@ -51,17 +48,18 @@
 
 (defn extract-links
   "Extract the links from the given html. Ignores authors."
-  [html]
-  (reduce (fn [ls h] (apply hash-set
-                            (concat ls
-                                    (reduce (fn [ls h2] (if-not (string? h2)
-                                                          (if (and (= (first h2) :a)
-                                                                   (not (*authors* (:href (second h2)))))
-                                                            (conj ls (:href (second h2)))
-                                                            ls)
-                                                          ls))
-                                            #{}
-                                            (ts/children h)))))
+  [html exclusions]
+  (reduce (fn [ls h]
+            (if (not (string? h))
+              (apply hash-set (concat
+                               (if-not (string? h)
+                                 (if (and (= (first h) :a)
+                                          (not (exclusions (:href (second h)))))
+                                   (conj ls (:href (second h)))
+                                   ls)
+                                 ls)
+                               (extract-links h exclusions)))
+              ls))
           #{}
           (ts/children html)))
 
@@ -98,9 +96,9 @@
           (if-let [next-para (try
                                (find-id (find-and-parse-page next) "page-content")
                                (catch Exception e nil))] ;; This is necessary as the http request will throw exceptions on 404, and some pages aren't written.
-            (recur (concat (rest to-check) (extract-links next-para))
+            (recur (concat (rest to-check) (extract-links next-para *authors*))
                    (conj visited next)
-                   (assoc out next {:links (extract-links next-para)
+                   (assoc out next {:links (extract-links next-para *authors*)
                                     :author (extract-author next-para)}))
             (recur (rest to-check)
                    (conj visited next)
@@ -159,14 +157,14 @@
 (defn -main
   "Calculate and print graphs of OD-117 to ranked.dot and general.dot."
   [& args]
-  (let [{:keys [wiki-address authors author-colours turns start-points]} (edn/read (java.io.PushbackReader. (io/reader "data/od117.edn")))]
+  (let [{:keys [wiki-address turns]} (edn/read (java.io.PushbackReader. (io/reader "data/od117.edn")))]
     (binding [*wiki-address* wiki-address
-              *authors* authors
-              *author-colours* author-colours
-              *turns* turns
-              *start-points* start-points]
-      (let [g (walk start-points authors)]
-        (with-open [wrtr (io/writer "output/ranked.dot")]
-          (.write wrtr (graphify-ranked g)))
-        (with-open [wrtr (io/writer "output/general.dot")]
-          (.write wrtr (graphify-unordered g)))))))
+              *turns* turns]
+      (binding [*authors* (conj (extract-links (find-id (find-and-parse-page "scholars") "page-content") #{}) "javascript:;")]
+        (binding [*author-colours* (reduce #(assoc %1 (first %2) (second %2)) {} (map vector *authors* colours))]
+          (let [start-points (extract-links (find-id (find-and-parse-page "written-entries") "page-content") #{})
+                g (walk start-points *authors*)]
+            (with-open [wrtr (io/writer "output/ranked.dot")]
+              (.write wrtr (graphify-ranked g)))
+            (with-open [wrtr (io/writer "output/general.dot")]
+              (.write wrtr (graphify-unordered g)))))))))
