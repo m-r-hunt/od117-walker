@@ -7,7 +7,7 @@ digraph G {
 "/harmonising-shrimp" [color=burlywood1,style=filled];
 "/soeh-of-the-deep" [color=brown1,style=filled];
 "/boron-staphylococcus" [color=forestgreen,style=filled];
-"/untouchable-axo";
+"/untouchable-axo" [color=brown1,style=filled];
 "/castellum-beetles" [color=aquamarine,style=filled];
 "/upper-slipstream-currents";
 "/firespout-mountains" [color=chocolate1,style=filled];
@@ -17,14 +17,14 @@ digraph G {
 "/igneous-jet-wasp" [color=aquamarine,style=filled];
 "/lesser-spotted-rampike-owl" [color=cadetblue1,style=filled];
 "/wisp";
+"/yonder-hen";
 "/venomdrake" [color=aquamarine,style=filled];
 "/petigrew-tree-rabbits" [color=brown1,style=filled];
 "/welond";
-"/weylond";
 "/quentel-yellow-grass" [color=burlywood1,style=filled];
 "/noxious-snow-cactus" [color=brown1,style=filled];
 "/grazing-humdingers" [color=chocolate1,style=filled];
-"/viscerpion";
+"/viscerpion" [color=darkorchid2,style=filled];
 "/mendacious-islands" [color=cadetblue1,style=filled];
 "/zandrashu";
 "/dancing-lights" [color=brown1,style=filled];
@@ -48,7 +48,7 @@ digraph G {
 "/gullible-apes" [color=brown1,style=filled];
 "/knox-tree" [color=burlywood1,style=filled];
 "/parasumatra" [color=aquamarine,style=filled];
-"/white-phoenix";
+"/white-phoenix" [color=aquamarine,style=filled];
 "/manxomesnatch" [color=cadetblue1,style=filled];
 "/redacted";
 "/plasma-ants" [color=cadetblue1,style=filled];
@@ -84,6 +84,9 @@ digraph G {
 "/soeh-of-the-deep" -> "/redacted";
 "/boron-staphylococcus" -> "/petigrew-tree-rabbits";
 "/boron-staphylococcus" -> "/silicone-razer-bell";
+"/untouchable-axo" -> "/whaletitans";
+"/untouchable-axo" -> "/white-phoenix";
+"/untouchable-axo" -> "/zkovsky-expedition";
 "/castellum-beetles" -> "/quadratic-fungus";
 "/castellum-beetles" -> "/sonic-worms";
 "/firespout-mountains" -> "/boron-staphylococcus";
@@ -113,6 +116,9 @@ digraph G {
 "/grazing-humdingers" -> "/venomdrake";
 "/grazing-humdingers" -> "/yellow-stasis-tree";
 "/grazing-humdingers" -> "/anachronistic-shrubs";
+"/viscerpion" -> "/xeric-crows";
+"/viscerpion" -> "/igneous-jet-wasp";
+"/viscerpion" -> "/yonder-hen";
 "/mendacious-islands" -> "/wisp";
 "/mendacious-islands" -> "/zandrashu";
 "/mendacious-islands" -> "/keening-seal";
@@ -128,6 +134,8 @@ digraph G {
 "/interagile-ocean" -> "/venomdrake";
 "/interagile-ocean" -> "/rece";
 "/interagile-ocean" -> "/elegiac-penguins";
+"/ulcerous-leaping-sheep" -> "/petigrew-tree-rabbits";
+"/ulcerous-leaping-sheep" -> "/zandrashu";
 "/quadratic-fungus" -> "/untouchable-axo";
 "/quadratic-fungus" -> "/venomdrake";
 "/quadratic-fungus" -> "/zkovsky-expedition";
@@ -152,7 +160,7 @@ digraph G {
 "/elegiac-penguins" -> "/manxomesnatch";
 "/the-monstrous-thing" -> "/iso-ph-synoptic-cycles";
 "/the-monstrous-thing" -> "/effervescent-wilderness";
-"/the-monstrous-thing" -> "/weylond";
+"/the-monstrous-thing" -> "/welond";
 "/onami" -> "/lunar-formations";
 "/onami" -> "/soeh-of-the-deep";
 "/onami" -> "/silicone-razer-bell";
