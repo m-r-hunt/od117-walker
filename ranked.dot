@@ -5,7 +5,7 @@ abc;
 "/boron-staphylococcus" [color=brown1,style=filled];
 "/castellum-beetles" [color=cadetblue1,style=filled];
 "/crystal-trees" [color=darkorchid2,style=filled];
-"/anachronistic-shrubs";
+"/anachronistic-shrubs" [color=forestgreen,style=filled];
 "/caseinogenic-blood-rose" [color=aquamarine,style=filled];
 "/aardvark" [color=burlywood1,style=filled];
 }
@@ -15,13 +15,13 @@ def;
 "/firespout-mountains" [color=burlywood1,style=filled];
 "/dancing-lights" [color=darkorchid2,style=filled];
 "/euclidiocite" [color=aquamarine,style=filled];
-"/depths-of-anguish";
+"/depths-of-anguish" [color=forestgreen,style=filled];
 "/elegiac-penguins" [color=cadetblue1,style=filled];
 }
 { rank=same;
 ghi;
 "/iso-ph-synoptic-cycles" [color=brown1,style=filled];
-"/harmonising-shrimp";
+"/harmonising-shrimp" [color=forestgreen,style=filled];
 "/igneous-jet-wasp" [color=cadetblue1,style=filled];
 "/grazing-humdingers" [color=burlywood1,style=filled];
 "/interagile-ocean" [color=aquamarine,style=filled];
@@ -32,7 +32,7 @@ jkl;
 "/lunar-formations" [color=cadetblue1,style=filled];
 "/lesser-spotted-rampike-owl" [color=aquamarine,style=filled];
 "/languid-plelm" [color=darkorchid2,style=filled];
-"/knox-tree";
+"/knox-tree" [color=forestgreen,style=filled];
 "/keening-seal" [color=burlywood1,style=filled];
 }
 { rank=same;
@@ -42,13 +42,13 @@ mno;
 "/nebula-fly-trap" [color=burlywood1,style=filled];
 "/noxious-snow-cactus" [color=darkorchid2,style=filled];
 "/mendacious-islands" [color=aquamarine,style=filled];
-"/onami";
+"/onami" [color=forestgreen,style=filled];
 "/manxomesnatch" [color=aquamarine,style=filled];
 }
 { rank=same;
 pq;
 "/petigrew-tree-rabbits" [color=darkorchid2,style=filled];
-"/quentel-yellow-grass";
+"/quentel-yellow-grass" [color=forestgreen,style=filled];
 "/quadratic-fungus" [color=burlywood1,style=filled];
 "/parasumatra" [color=cadetblue1,style=filled];
 "/plasma-ants" [color=aquamarine,style=filled];
@@ -61,7 +61,7 @@ rs;
 "/sonic-worms" [color=aquamarine,style=filled];
 "/silicone-razer-bell" [color=cadetblue1,style=filled];
 "/redacted";
-"/screaming-catrabbit";
+"/screaming-catrabbit" [color=forestgreen,style=filled];
 }
 { rank=same;
 tuv;
@@ -72,7 +72,7 @@ tuv;
 "/ulcerous-leaping-sheep" [color=aquamarine,style=filled];
 "/the-monstrous-thing" [color=burlywood1,style=filled];
 "/voctarion-plasma";
-"/terravores";
+"/terravores" [color=forestgreen,style=filled];
 }
 { rank=same;
 wxyz;
