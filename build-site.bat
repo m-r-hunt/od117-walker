@@ -2,7 +2,7 @@
 
 if not exist "output" mkdir output
 
-cp static/* output
+xcopy /y static\* output
 
 call lein run
 
