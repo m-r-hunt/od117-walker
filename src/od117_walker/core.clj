@@ -140,6 +140,12 @@
          (apply str vals)
          "}\n")))
 
+(defn make-author-colours
+  [authors]
+  (reduce #(assoc %1 (first %2) (second %2))
+                                 {}
+                                 (map vector authors colours)))
+
 (defn -main
   "Calculate and print graphs of OD-117 to ranked.dot and general.dot."
   [& args]
@@ -148,9 +154,7 @@
                                                                wiki-address)
                                           "page-content")
                                  #{})
-          author-colours (reduce #(assoc %1 (first %2) (second %2))
-                                 {}
-                                 (map vector authors colours))
+          author-colours (make-author-colours authors)
           start-points (extract-links (find-id (find-and-parse-page "written-entries"
                                                                     wiki-address)
                                                "page-content")
