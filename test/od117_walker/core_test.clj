@@ -51,6 +51,10 @@
 (def test-author-colours {"/alice" "brown1", "/bob" "aquamarine"})
 (def test-turns [#{\a \b \c} #{\d \e \f}])
 
+;; Note about these graph tests - the line order doesn't matter and could
+;; change. If they break for that reason it may be worth rewriting to
+;; be independent of order.
+
 (t/deftest test-graphify-ranked
   (t/is (= (graphify-ranked test-graph
                             test-author-colours
