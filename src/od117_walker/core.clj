@@ -47,21 +47,26 @@
           (ts/children html)))
 
 ;; TODO: Refactor these 2 functions as they are copy/pasted.
-(defn extract-author
+(defn extract-author-help
   "Extract the author of the entry from the html. Assumes there is only one author linked."
   [html authors]
-  (first (reduce (fn [ls h] (apply hash-set
-                                   (concat ls
-                                           (reduce (fn [ls h2] (if-not (string? h2)
-                                                                 (if (and (= (first h2) :a)
-                                                                          (authors (:href (second h2))))
-                                                                   (conj ls (:href (second h2)))
-                                                                   ls)
-                                                                 ls))
-                                                   []
-                                                   (ts/children h)))))
-                 []
-                 (ts/children html))))
+  (reduce (fn [ls h]
+                    (if (not (string? h))
+                      (apply hash-set (concat
+                                       (if-not (string? h)
+                                         (if (and (= (first h) :a)
+                                                  (authors (:href (second h))))
+                                           (conj ls (:href (second h)))
+                                           ls)
+                                         ls)
+                                       (extract-author-help h authors)))
+                      ls))
+                  #{}
+                  (ts/children html)))
+
+(defn extract-author
+  [html author]
+  (first (extract-author-help html author)))
 
 (defn walk
   "Walk through the wiki building a graph representation. Takes a list of starting pages and a set of pages to ignore."

@@ -4,6 +4,11 @@
 
             [clojure.test :as t]))
 
+(t/deftest test-find-and-parse-page
+  (with-redefs [clj-http.client/get (fn [addr] (if (= addr "http://some-wiki.example.com/aardvark") data/aardvark-req))]
+    (t/is (= (find-and-parse-page "aardvark" "http://some-wiki.example.com/")
+             data/aardvark-html))))
+
 (t/deftest test-find-id
   (t/is (= (find-id data/aardvark-html "page-content") data/aardvark-content)))
 
@@ -19,6 +24,22 @@
                            #{"/prof-cuthburt-robinson-smithe"})
            "/prof-cuthburt-robinson-smithe")))
 
+(defn mock-fapp
+  [page _]
+  (case page
+    "/foo" [:html {} [:body {} [:div {:id "page-content"} [:a {:shape "rect", :href "/bar"}] [:a {:shape "rect", :href "/baz"}] [:a {:shape "rect", :href "/alice"}]]]]
+    "/bar" [:html {} [:body {} [:div {:id "page-content"} [:a {:shape "rect", :href "/baz"}] [:a {:shape "rect", :href "/baz"}] [:a {:shape "rect", :href "/bob"}]]]]
+    :default (throw Exception)))
+
+(def test-graph {"/foo" {:links #{"/bar" "/baz"} :author "/alice"}
+                 "/bar" {:links #{"/baz"} :author "/bob"}
+                 "/baz" {}})
+
+(t/deftest test-walk
+  (t/is (= (with-redefs [find-and-parse-page mock-fapp]
+             (walk ["/foo"] #{"/alice" "/bob"} "http://some-wiki.example.com/"))
+           test-graph)))
+
 (t/deftest test-make-author-colours
   (let [test-authors #{"/alice" "/bob"}
         acs (make-author-colours test-authors)]
@@ -27,8 +48,6 @@
     (t/is (every? (into #{} colours) (vals acs)))
     (t/is (apply distinct? (vals acs)))))
 
-(def test-graph {"/foo" {:links #{"/bar" "/baz"} :author "/alice"}
-                 "/bar" {:links #{"/baz"} :author "/bob"}})
 (def test-author-colours {"/alice" "brown1", "/bob" "aquamarine"})
 (def test-turns [#{\a \b \c} #{\d \e \f}])
 
@@ -41,6 +60,7 @@ abc->def;
 { rank=same;
 abc;
 \"/bar\" [color=aquamarine,style=filled];
+\"/baz\";
 }
 { rank=same;
 def;
@@ -57,6 +77,7 @@ def;
            "digraph G {
 \"/foo\" [color=brown1,style=filled];
 \"/bar\" [color=aquamarine,style=filled];
+\"/baz\";
 \"/foo\" -> \"/baz\";
 \"/foo\" -> \"/bar\";
 \"/bar\" -> \"/baz\";
