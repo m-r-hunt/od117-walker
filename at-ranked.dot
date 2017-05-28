@@ -40,7 +40,7 @@ l;
 }
 { rank=same;
 m;
-"/menizance";
+"/menizance" [color=burlywood1,style=filled];
 }
 { rank=same;
 n;
@@ -53,7 +53,7 @@ p;
 }
 { rank=same;
 q;
-"/quintus-ignatius";
+"/quintus-ignatius" [color=brown1,style=filled];
 }
 { rank=same;
 r;

@@ -1,7 +1,7 @@
 digraph G {
 "/unary-tower" [color=aquamarine,style=filled];
-"/quintus-ignatius";
-"/menizance";
+"/quintus-ignatius" [color=brown1,style=filled];
+"/menizance" [color=burlywood1,style=filled];
 "/tower-of-dreams";
 "/library-of-aesthetics";
 "/rigellian-influx";
