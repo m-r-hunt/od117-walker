@@ -168,4 +168,19 @@
       (with-open [wrtr (io/writer "output/ranked.dot")]
         (.write wrtr (graphify-ranked g author-colours turns)))
       (with-open [wrtr (io/writer "output/general.dot")]
+        (.write wrtr (graphify-unordered g author-colours)))))
+  (let [{:keys [wiki-address turns]} (edn/read-string (slurp "data/atlantis-tourism.edn"))]
+    (let [authors (extract-links (find-id (find-and-parse-page "scholars"
+                                                               wiki-address)
+                                          "page-content")
+                                 #{})
+          author-colours (make-author-colours authors)
+          start-points (extract-links (find-id (find-and-parse-page "written-entries"
+                                                                    wiki-address)
+                                               "page-content")
+                                      #{})
+          g (walk start-points authors wiki-address)]
+      (with-open [wrtr (io/writer "output/at-ranked.dot")]
+        (.write wrtr (graphify-ranked g author-colours turns)))
+      (with-open [wrtr (io/writer "output/at-general.dot")]
         (.write wrtr (graphify-unordered g author-colours))))))
