@@ -1,0 +1,96 @@
+digraph G {
+a->b->c->d->e->f->g->h->i->j->k->l->m->n->o->p->q->r->s->t->u->v->w->x->y->z;
+{ rank=same;
+a;
+}
+{ rank=same;
+b;
+}
+{ rank=same;
+c;
+}
+{ rank=same;
+d;
+}
+{ rank=same;
+e;
+}
+{ rank=same;
+f;
+}
+{ rank=same;
+g;
+}
+{ rank=same;
+h;
+}
+{ rank=same;
+i;
+}
+{ rank=same;
+j;
+}
+{ rank=same;
+k;
+"/katchakan-empire";
+}
+{ rank=same;
+l;
+"/library-of-aesthetics";
+}
+{ rank=same;
+m;
+"/menizance";
+}
+{ rank=same;
+n;
+}
+{ rank=same;
+o;
+}
+{ rank=same;
+p;
+}
+{ rank=same;
+q;
+"/quintus-ignatius";
+}
+{ rank=same;
+r;
+"/rigellian-influx";
+}
+{ rank=same;
+s;
+}
+{ rank=same;
+t;
+"/tower-of-dreams";
+"/the-school-of-mystery";
+"/the-dogmatic-order-of-science";
+}
+{ rank=same;
+u;
+"/unary-tower" [color=aquamarine,style=filled];
+}
+{ rank=same;
+v;
+}
+{ rank=same;
+w;
+}
+{ rank=same;
+x;
+}
+{ rank=same;
+y;
+}
+{ rank=same;
+z;
+}
+"/unary-tower" -> "/tower-of-dreams";
+"/unary-tower" -> "/library-of-aesthetics";
+"/quintus-ignatius" -> "/rigellian-influx";
+"/quintus-ignatius" -> "/katchakan-empire";
+"/menizance" -> "/the-school-of-mystery";
+"/menizance" -> "/the-dogmatic-order-of-science";
+}

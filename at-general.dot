@@ -1,0 +1,17 @@
+digraph G {
+"/unary-tower" [color=aquamarine,style=filled];
+"/quintus-ignatius";
+"/menizance";
+"/tower-of-dreams";
+"/library-of-aesthetics";
+"/rigellian-influx";
+"/katchakan-empire";
+"/the-school-of-mystery";
+"/the-dogmatic-order-of-science";
+"/unary-tower" -> "/tower-of-dreams";
+"/unary-tower" -> "/library-of-aesthetics";
+"/quintus-ignatius" -> "/rigellian-influx";
+"/quintus-ignatius" -> "/katchakan-empire";
+"/menizance" -> "/the-school-of-mystery";
+"/menizance" -> "/the-dogmatic-order-of-science";
+}

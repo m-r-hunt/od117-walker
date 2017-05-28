@@ -59,7 +59,7 @@ digraph G {
 "/xylanite" [color=forestgreen,style=filled];
 "/voctarion-plasma";
 "/terravores" [color=forestgreen,style=filled];
-"/zkovsky-expedition";
+"/zkovsky-expedition" [color=chocolate1,style=filled];
 "/screaming-catrabbit" [color=forestgreen,style=filled];
 "/aardvark" [color=burlywood1,style=filled];
 "/lunar-formations" -> "/firespout-mountains";
@@ -203,6 +203,10 @@ digraph G {
 "/terravores" -> "/viscerpion";
 "/terravores" -> "/euclidiocite";
 "/terravores" -> "/parasumatra";
+"/zkovsky-expedition" -> "/upper-slipstream-currents";
+"/zkovsky-expedition" -> "/madness-crabs";
+"/zkovsky-expedition" -> "/parasumatra";
+"/zkovsky-expedition" -> "/xylanite";
 "/screaming-catrabbit" -> "/yellow-stasis-tree";
 "/screaming-catrabbit" -> "/gullible-apes";
 "/screaming-catrabbit" -> "/parasumatra";
