@@ -2,18 +2,22 @@ digraph G {
 a->b->c->d->e->f->g->h->i->j->k->l->m->n->o->p->q->r->s->t->u->v->w->x->y->z;
 { rank=same;
 a;
+"/aardvark" [color=darkorchid2,style=filled];
 }
 { rank=same;
 b;
 }
 { rank=same;
 c;
+"/circle-market";
 }
 { rank=same;
 d;
+"/dogmatic-order-of-science";
 }
 { rank=same;
 e;
+"/eggs-of-illitarus" [color=cadetblue1,style=filled];
 }
 { rank=same;
 f;
@@ -23,15 +27,18 @@ g;
 }
 { rank=same;
 h;
+"/hydroplegic-barrier";
 }
 { rank=same;
 i;
+"/imbroglia-trail" [color=aquamarine,style=filled];
 }
 { rank=same;
 j;
 }
 { rank=same;
 k;
+"/king-lef-trangour";
 "/katchakan-empire";
 }
 { rank=same;
@@ -40,7 +47,7 @@ l;
 }
 { rank=same;
 m;
-"/menizance" [color=burlywood1,style=filled];
+"/menizance" [color=chocolate1,style=filled];
 }
 { rank=same;
 n;
@@ -53,30 +60,32 @@ p;
 }
 { rank=same;
 q;
-"/quintus-ignatius" [color=brown1,style=filled];
+"/quintus-ignatius" [color=burlywood1,style=filled];
 }
 { rank=same;
 r;
+"/rhamosul-the-god-of-colour";
 "/rigellian-influx";
 }
 { rank=same;
 s;
+"/school-of-mystery";
 }
 { rank=same;
 t;
+"/thaumocractic-era";
 "/tower-of-dreams";
-"/the-school-of-mystery";
-"/the-dogmatic-order-of-science";
 }
 { rank=same;
 u;
-"/unary-tower" [color=aquamarine,style=filled];
+"/unary-tower" [color=brown1,style=filled];
 }
 { rank=same;
 v;
 }
 { rank=same;
 w;
+"/west-gardens";
 }
 { rank=same;
 x;
@@ -89,8 +98,14 @@ z;
 }
 "/unary-tower" -> "/tower-of-dreams";
 "/unary-tower" -> "/library-of-aesthetics";
+"/imbroglia-trail" -> "/thaumocractic-era";
+"/imbroglia-trail" -> "/hydroplegic-barrier";
+"/eggs-of-illitarus" -> "/king-lef-trangour";
+"/eggs-of-illitarus" -> "/circle-market";
 "/quintus-ignatius" -> "/rigellian-influx";
 "/quintus-ignatius" -> "/katchakan-empire";
-"/menizance" -> "/the-school-of-mystery";
-"/menizance" -> "/the-dogmatic-order-of-science";
+"/menizance" -> "/school-of-mystery";
+"/menizance" -> "/dogmatic-order-of-science";
+"/aardvark" -> "/rhamosul-the-god-of-colour";
+"/aardvark" -> "/west-gardens";
 }
