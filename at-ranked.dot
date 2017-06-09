@@ -6,6 +6,7 @@ a;
 }
 { rank=same;
 b;
+"/bright-eye-infection" [color=darkorchid2,style=filled];
 }
 { rank=same;
 c;
@@ -21,6 +22,7 @@ e;
 }
 { rank=same;
 f;
+"/fractious-filibuster" [color=cadetblue1,style=filled];
 }
 { rank=same;
 g;
@@ -31,13 +33,16 @@ h;
 }
 { rank=same;
 i;
+"/institute-for-the-containment-of-magical-malfeasance";
 "/imbroglia-trail" [color=aquamarine,style=filled];
 }
 { rank=same;
 j;
+"/javelin-warshrike" [color=aquamarine,style=filled];
 }
 { rank=same;
 k;
+"/kerogen-carp";
 "/king-lef-trangour";
 "/katchakan-empire";
 }
@@ -47,10 +52,12 @@ l;
 }
 { rank=same;
 m;
+"/mayor-magpie";
 "/menizance" [color=chocolate1,style=filled];
 }
 { rank=same;
 n;
+"/naysayer" [color=chocolate1,style=filled];
 }
 { rank=same;
 o;
@@ -64,16 +71,20 @@ q;
 }
 { rank=same;
 r;
-"/rhamosul-the-god-of-colour";
+"/rhamosul-the-god-of-colour" [color=burlywood1,style=filled];
 "/rigellian-influx";
 }
 { rank=same;
 s;
+"/skarm";
 "/school-of-mystery";
+"/society-of-guardians";
 }
 { rank=same;
 t;
+"/thrallr-first-of-the-gods";
 "/thaumocractic-era";
+"/thaumocratic-era";
 "/tower-of-dreams";
 }
 { rank=same;
@@ -82,6 +93,7 @@ u;
 }
 { rank=same;
 v;
+"/vault-of-the-heavens" [color=brown1,style=filled];
 }
 { rank=same;
 w;
@@ -98,12 +110,31 @@ z;
 }
 "/unary-tower" -> "/tower-of-dreams";
 "/unary-tower" -> "/library-of-aesthetics";
+"/javelin-warshrike" -> "/unary-tower";
+"/javelin-warshrike" -> "/society-of-guardians";
+"/javelin-warshrike" -> "/katchakan-empire";
 "/imbroglia-trail" -> "/thaumocractic-era";
 "/imbroglia-trail" -> "/hydroplegic-barrier";
+"/rhamosul-the-god-of-colour" -> "/thrallr-first-of-the-gods";
+"/rhamosul-the-god-of-colour" -> "/library-of-aesthetics";
+"/rhamosul-the-god-of-colour" -> "/menizance";
 "/eggs-of-illitarus" -> "/king-lef-trangour";
 "/eggs-of-illitarus" -> "/circle-market";
+"/naysayer" -> "/west-gardens";
+"/naysayer" -> "/mayor-magpie";
+"/naysayer" -> "/aardvark";
 "/quintus-ignatius" -> "/rigellian-influx";
 "/quintus-ignatius" -> "/katchakan-empire";
+"/bright-eye-infection" -> "/institute-for-the-containment-of-magical-malfeasance";
+"/bright-eye-infection" -> "/unary-tower";
+"/bright-eye-infection" -> "/rhamosul-the-god-of-colour";
+"/bright-eye-infection" -> "/library-of-aesthetics";
+"/vault-of-the-heavens" -> "/skarm";
+"/vault-of-the-heavens" -> "/menizance";
+"/vault-of-the-heavens" -> "/katchakan-empire";
+"/fractious-filibuster" -> "/kerogen-carp";
+"/fractious-filibuster" -> "/naysayer";
+"/fractious-filibuster" -> "/thaumocratic-era";
 "/menizance" -> "/school-of-mystery";
 "/menizance" -> "/dogmatic-order-of-science";
 "/aardvark" -> "/rhamosul-the-god-of-colour";
