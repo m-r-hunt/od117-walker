@@ -3,7 +3,7 @@ digraph G {
 "/thrallr-first-of-the-gods";
 "/unary-tower" [color=brown1,style=filled];
 "/kerogen-carp";
-"/skarm";
+"/skarm" [color=burlywood1,style=filled];
 "/thaumocractic-era";
 "/javelin-warshrike" [color=aquamarine,style=filled];
 "/school-of-mystery";
@@ -17,6 +17,7 @@ digraph G {
 "/society-of-guardians";
 "/vault-of-the-heavens" [color=brown1,style=filled];
 "/west-gardens";
+"/xia-qu";
 "/thaumocratic-era";
 "/mayor-magpie";
 "/tower-of-dreams";
@@ -31,6 +32,9 @@ digraph G {
 "/aardvark" [color=darkorchid2,style=filled];
 "/unary-tower" -> "/tower-of-dreams";
 "/unary-tower" -> "/library-of-aesthetics";
+"/skarm" -> "/school-of-mystery";
+"/skarm" -> "/eggs-of-illitarus";
+"/skarm" -> "/xia-qu";
 "/javelin-warshrike" -> "/unary-tower";
 "/javelin-warshrike" -> "/society-of-guardians";
 "/javelin-warshrike" -> "/katchakan-empire";

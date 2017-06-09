@@ -76,7 +76,7 @@ r;
 }
 { rank=same;
 s;
-"/skarm";
+"/skarm" [color=burlywood1,style=filled];
 "/school-of-mystery";
 "/society-of-guardians";
 }
@@ -101,6 +101,7 @@ w;
 }
 { rank=same;
 x;
+"/xia-qu";
 }
 { rank=same;
 y;
@@ -110,6 +111,9 @@ z;
 }
 "/unary-tower" -> "/tower-of-dreams";
 "/unary-tower" -> "/library-of-aesthetics";
+"/skarm" -> "/school-of-mystery";
+"/skarm" -> "/eggs-of-illitarus";
+"/skarm" -> "/xia-qu";
 "/javelin-warshrike" -> "/unary-tower";
 "/javelin-warshrike" -> "/society-of-guardians";
 "/javelin-warshrike" -> "/katchakan-empire";
