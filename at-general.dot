@@ -4,7 +4,6 @@ digraph G {
 "/unary-tower" [color=brown1,style=filled];
 "/kerogen-carp";
 "/skarm" [color=burlywood1,style=filled];
-"/thaumocractic-era";
 "/javelin-warshrike" [color=aquamarine,style=filled];
 "/school-of-mystery";
 "/imbroglia-trail" [color=aquamarine,style=filled];
@@ -38,7 +37,7 @@ digraph G {
 "/javelin-warshrike" -> "/unary-tower";
 "/javelin-warshrike" -> "/society-of-guardians";
 "/javelin-warshrike" -> "/katchakan-empire";
-"/imbroglia-trail" -> "/thaumocractic-era";
+"/imbroglia-trail" -> "/thaumocratic-era";
 "/imbroglia-trail" -> "/hydroplegic-barrier";
 "/rhamosul-the-god-of-colour" -> "/thrallr-first-of-the-gods";
 "/rhamosul-the-god-of-colour" -> "/library-of-aesthetics";
