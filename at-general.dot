@@ -50,7 +50,6 @@ digraph G {
 "/quintus-ignatius" -> "/rigellian-influx";
 "/quintus-ignatius" -> "/katchakan-empire";
 "/bright-eye-infection" -> "/institute-for-the-containment-of-magical-malfeasance";
-"/bright-eye-infection" -> "/unary-tower";
 "/bright-eye-infection" -> "/rhamosul-the-god-of-colour";
 "/bright-eye-infection" -> "/library-of-aesthetics";
 "/vault-of-the-heavens" -> "/skarm";
