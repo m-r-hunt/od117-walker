@@ -2,6 +2,7 @@ digraph G {
 a->b->c->d->e->f->g->h->i->j->k->l->m->n->o->p->q->r->s->t->u->v->w->x->y->z;
 { rank=same;
 a;
+"/astari";
 "/aardvark" [color=darkorchid2,style=filled];
 }
 { rank=same;
@@ -10,10 +11,11 @@ b;
 }
 { rank=same;
 c;
-"/circle-market";
+"/circle-market" [color=darkorchid2,style=filled];
 }
 { rank=same;
 d;
+"/distillation-district";
 "/dogmatic-order-of-science";
 }
 { rank=same;
@@ -26,6 +28,7 @@ f;
 }
 { rank=same;
 g;
+"/gnomes-by-oolio" [color=cadetblue1,style=filled];
 }
 { rank=same;
 h;
@@ -42,7 +45,7 @@ j;
 }
 { rank=same;
 k;
-"/kerogen-carp";
+"/kerogen-carp" [color=aquamarine,style=filled];
 "/king-lef-trangour";
 "/katchakan-empire";
 }
@@ -58,12 +61,15 @@ m;
 { rank=same;
 n;
 "/naysayer" [color=chocolate1,style=filled];
+"/northern-gardens";
 }
 { rank=same;
 o;
+"/oshras-boutique";
 }
 { rank=same;
 p;
+"/paula-incident";
 }
 { rank=same;
 q;
@@ -84,7 +90,7 @@ s;
 t;
 "/thrallr-first-of-the-gods";
 "/thaumocratic-era";
-"/tower-of-dreams";
+"/tower-of-dreams" [color=burlywood1,style=filled];
 }
 { rank=same;
 u;
@@ -96,7 +102,7 @@ v;
 }
 { rank=same;
 w;
-"/west-gardens";
+"/west-gardens" [color=brown1,style=filled];
 }
 { rank=same;
 x;
@@ -110,6 +116,9 @@ z;
 }
 "/unary-tower" -> "/tower-of-dreams";
 "/unary-tower" -> "/library-of-aesthetics";
+"/kerogen-carp" -> "/distillation-district";
+"/kerogen-carp" -> "/vault-of-the-heavens";
+"/kerogen-carp" -> "/rigellian-influx";
 "/skarm" -> "/school-of-mystery";
 "/skarm" -> "/eggs-of-illitarus";
 "/skarm" -> "/xia-qu";
@@ -134,9 +143,21 @@ z;
 "/vault-of-the-heavens" -> "/skarm";
 "/vault-of-the-heavens" -> "/menizance";
 "/vault-of-the-heavens" -> "/katchakan-empire";
+"/west-gardens" -> "/king-lef-trangour";
+"/west-gardens" -> "/northern-gardens";
+"/west-gardens" -> "/bright-eye-infection";
+"/tower-of-dreams" -> "/bright-eye-infection";
+"/tower-of-dreams" -> "/astari";
+"/tower-of-dreams" -> "/dogmatic-order-of-science";
 "/fractious-filibuster" -> "/kerogen-carp";
 "/fractious-filibuster" -> "/naysayer";
 "/fractious-filibuster" -> "/thaumocratic-era";
+"/gnomes-by-oolio" -> "/imbroglia-trail";
+"/gnomes-by-oolio" -> "/paula-incident";
+"/gnomes-by-oolio" -> "/library-of-aesthetics";
+"/circle-market" -> "/oshras-boutique";
+"/circle-market" -> "/rigellian-influx";
+"/circle-market" -> "/menizance";
 "/menizance" -> "/school-of-mystery";
 "/menizance" -> "/dogmatic-order-of-science";
 "/aardvark" -> "/rhamosul-the-god-of-colour";
