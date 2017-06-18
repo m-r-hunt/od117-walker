@@ -154,7 +154,7 @@
 (defn -main
   "Calculate and print graphs of OD-117 to ranked.dot and general.dot."
   [& args]
-  (let [{:keys [wiki-address turns]} (edn/read-string (slurp "data/od117.edn"))]
+  #_(let [{:keys [wiki-address turns]} (edn/read-string (slurp "data/od117.edn"))]
     (let [authors (extract-links (find-id (find-and-parse-page "scholars"
                                                                wiki-address)
                                           "page-content")
