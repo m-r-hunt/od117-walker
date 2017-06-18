@@ -8,6 +8,7 @@ a;
 { rank=same;
 b;
 "/bright-eye-infection" [color=darkorchid2,style=filled];
+"/byak-district";
 }
 { rank=same;
 c;
@@ -20,6 +21,7 @@ d;
 }
 { rank=same;
 e;
+"/energetic-prison";
 "/eggs-of-illitarus" [color=cadetblue1,style=filled];
 }
 { rank=same;
@@ -65,7 +67,7 @@ n;
 }
 { rank=same;
 o;
-"/oshras-boutique";
+"/oshras-boutique" [color=chocolate1,style=filled];
 }
 { rank=same;
 p;
@@ -149,6 +151,9 @@ z;
 "/tower-of-dreams" -> "/bright-eye-infection";
 "/tower-of-dreams" -> "/astari";
 "/tower-of-dreams" -> "/dogmatic-order-of-science";
+"/oshras-boutique" -> "/energetic-prison";
+"/oshras-boutique" -> "/byak-district";
+"/oshras-boutique" -> "/vault-of-the-heavens";
 "/fractious-filibuster" -> "/kerogen-carp";
 "/fractious-filibuster" -> "/naysayer";
 "/fractious-filibuster" -> "/thaumocratic-era";

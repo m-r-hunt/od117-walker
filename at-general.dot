@@ -4,6 +4,7 @@ digraph G {
 "/unary-tower" [color=brown1,style=filled];
 "/kerogen-carp" [color=aquamarine,style=filled];
 "/skarm" [color=burlywood1,style=filled];
+"/energetic-prison";
 "/javelin-warshrike" [color=aquamarine,style=filled];
 "/school-of-mystery";
 "/imbroglia-trail" [color=aquamarine,style=filled];
@@ -17,6 +18,7 @@ digraph G {
 "/quintus-ignatius" [color=burlywood1,style=filled];
 "/bright-eye-infection" [color=darkorchid2,style=filled];
 "/society-of-guardians";
+"/byak-district";
 "/vault-of-the-heavens" [color=brown1,style=filled];
 "/west-gardens" [color=brown1,style=filled];
 "/xia-qu";
@@ -24,7 +26,7 @@ digraph G {
 "/mayor-magpie";
 "/astari";
 "/tower-of-dreams" [color=burlywood1,style=filled];
-"/oshras-boutique";
+"/oshras-boutique" [color=chocolate1,style=filled];
 "/dogmatic-order-of-science";
 "/rigellian-influx";
 "/fractious-filibuster" [color=cadetblue1,style=filled];
@@ -70,6 +72,9 @@ digraph G {
 "/tower-of-dreams" -> "/bright-eye-infection";
 "/tower-of-dreams" -> "/astari";
 "/tower-of-dreams" -> "/dogmatic-order-of-science";
+"/oshras-boutique" -> "/energetic-prison";
+"/oshras-boutique" -> "/byak-district";
+"/oshras-boutique" -> "/vault-of-the-heavens";
 "/fractious-filibuster" -> "/kerogen-carp";
 "/fractious-filibuster" -> "/naysayer";
 "/fractious-filibuster" -> "/thaumocratic-era";
