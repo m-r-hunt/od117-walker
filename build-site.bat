@@ -12,3 +12,7 @@ dot -Tpng .\output\general.dot -o"output/general.png"
 dot -Tpng .\output\at-ranked.dot -o"output/at-ranked.png"
 dot -Tpng .\output\at-general.dot -o"output/at-general.png"
 
+cd output
+git add .
+git commit -m "Updated graphs."
+git push
