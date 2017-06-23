@@ -2,6 +2,7 @@ digraph G {
 a->b->c->d->e->f->g->h->i->j->k->l->m->n->o->p->q->r->s->t->u->v->w->x->y->z;
 { rank=same;
 a;
+"/atlantean-times";
 "/astari";
 "/aardvark" [color=darkorchid2,style=filled];
 }
@@ -12,12 +13,13 @@ b;
 }
 { rank=same;
 c;
+"/congregation-of-literalist-orthodoxy";
 "/circle-market" [color=darkorchid2,style=filled];
 }
 { rank=same;
 d;
 "/distillation-district";
-"/dogmatic-order-of-science";
+"/dogmatic-order-of-science" [color=darkorchid2,style=filled];
 }
 { rank=same;
 e;
@@ -34,12 +36,14 @@ g;
 }
 { rank=same;
 h;
-"/hydroplegic-barrier";
+"/harmonious-monks";
+"/hydroplegic-barrier" [color=cadetblue1,style=filled];
 }
 { rank=same;
 i;
 "/institute-for-the-containment-of-magical-malfeasance";
 "/imbroglia-trail" [color=aquamarine,style=filled];
+"/ifiic-juvvio";
 }
 { rank=same;
 j;
@@ -53,7 +57,7 @@ k;
 }
 { rank=same;
 l;
-"/library-of-aesthetics";
+"/library-of-aesthetics" [color=aquamarine,style=filled];
 }
 { rank=same;
 m;
@@ -71,7 +75,7 @@ o;
 }
 { rank=same;
 p;
-"/paula-incident";
+"/paula-incident" [color=chocolate1,style=filled];
 }
 { rank=same;
 q;
@@ -108,7 +112,7 @@ w;
 }
 { rank=same;
 x;
-"/xia-qu";
+"/xia-qu" [color=brown1,style=filled];
 }
 { rank=same;
 y;
@@ -134,6 +138,8 @@ z;
 "/rhamosul-the-god-of-colour" -> "/menizance";
 "/eggs-of-illitarus" -> "/king-lef-trangour";
 "/eggs-of-illitarus" -> "/circle-market";
+"/paula-incident" -> "/thrallr-first-of-the-gods";
+"/paula-incident" -> "/aardvark";
 "/naysayer" -> "/west-gardens";
 "/naysayer" -> "/mayor-magpie";
 "/naysayer" -> "/aardvark";
@@ -148,18 +154,30 @@ z;
 "/west-gardens" -> "/king-lef-trangour";
 "/west-gardens" -> "/northern-gardens";
 "/west-gardens" -> "/bright-eye-infection";
+"/xia-qu" -> "/thrallr-first-of-the-gods";
+"/xia-qu" -> "/harmonious-monks";
+"/xia-qu" -> "/eggs-of-illitarus";
 "/tower-of-dreams" -> "/bright-eye-infection";
 "/tower-of-dreams" -> "/astari";
 "/tower-of-dreams" -> "/dogmatic-order-of-science";
 "/oshras-boutique" -> "/energetic-prison";
 "/oshras-boutique" -> "/byak-district";
 "/oshras-boutique" -> "/vault-of-the-heavens";
+"/dogmatic-order-of-science" -> "/atlantean-times";
+"/dogmatic-order-of-science" -> "/quintus-ignatius";
+"/dogmatic-order-of-science" -> "/hydroplegic-barrier";
 "/fractious-filibuster" -> "/kerogen-carp";
 "/fractious-filibuster" -> "/naysayer";
 "/fractious-filibuster" -> "/thaumocratic-era";
+"/hydroplegic-barrier" -> "/kerogen-carp";
+"/hydroplegic-barrier" -> "/ifiic-juvvio";
+"/hydroplegic-barrier" -> "/thaumocratic-era";
 "/gnomes-by-oolio" -> "/imbroglia-trail";
 "/gnomes-by-oolio" -> "/paula-incident";
 "/gnomes-by-oolio" -> "/library-of-aesthetics";
+"/library-of-aesthetics" -> "/thrallr-first-of-the-gods";
+"/library-of-aesthetics" -> "/congregation-of-literalist-orthodoxy";
+"/library-of-aesthetics" -> "/menizance";
 "/circle-market" -> "/oshras-boutique";
 "/circle-market" -> "/rigellian-influx";
 "/circle-market" -> "/menizance";
