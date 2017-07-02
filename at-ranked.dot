@@ -4,6 +4,7 @@ a->b->c->d->e->f->g->h->i->j->k->l->m->n->o->p->q->r->s->t->u->v->w->x->y->z;
 a;
 "/atlantean-times";
 "/astari";
+"/atlantean-royal-family";
 "/aardvark" [color=darkorchid2,style=filled];
 }
 { rank=same;
@@ -23,7 +24,7 @@ d;
 }
 { rank=same;
 e;
-"/energetic-prison";
+"/energetic-prison" [color=darkorchid2,style=filled];
 "/eggs-of-illitarus" [color=cadetblue1,style=filled];
 }
 { rank=same;
@@ -32,6 +33,7 @@ f;
 }
 { rank=same;
 g;
+"/goliath-district";
 "/gnomes-by-oolio" [color=cadetblue1,style=filled];
 }
 { rank=same;
@@ -41,12 +43,13 @@ h;
 }
 { rank=same;
 i;
-"/institute-for-the-containment-of-magical-malfeasance";
+"/institute-for-the-containment-of-magical-malfeasance" [color=cadetblue1,style=filled];
 "/imbroglia-trail" [color=aquamarine,style=filled];
 "/ifiic-juvvio";
 }
 { rank=same;
 j;
+"/j-hillari";
 "/javelin-warshrike" [color=aquamarine,style=filled];
 }
 { rank=same;
@@ -61,7 +64,7 @@ l;
 }
 { rank=same;
 m;
-"/mayor-magpie";
+"/mayor-magpie" [color=aquamarine,style=filled];
 "/menizance" [color=chocolate1,style=filled];
 }
 { rank=same;
@@ -76,9 +79,11 @@ o;
 { rank=same;
 p;
 "/paula-incident" [color=chocolate1,style=filled];
+"/pthanics";
 }
 { rank=same;
 q;
+"/quantus-the-god-of-uncertainty" [color=chocolate1,style=filled];
 "/quintus-ignatius" [color=burlywood1,style=filled];
 }
 { rank=same;
@@ -100,7 +105,9 @@ t;
 }
 { rank=same;
 u;
+"/underworks" [color=burlywood1,style=filled];
 "/unary-tower" [color=brown1,style=filled];
+"/university-of-enchantment-and-artifice";
 }
 { rank=same;
 v;
@@ -116,10 +123,19 @@ x;
 }
 { rank=same;
 y;
+"/yawning-day" [color=brown1,style=filled];
 }
 { rank=same;
 z;
+"/zygrites";
 }
+"/underworks" -> "/j-hillari";
+"/underworks" -> "/kerogen-carp";
+"/underworks" -> "/distillation-district";
+"/institute-for-the-containment-of-magical-malfeasance" -> "/distillation-district";
+"/institute-for-the-containment-of-magical-malfeasance" -> "/hydroplegic-barrier";
+"/institute-for-the-containment-of-magical-malfeasance" -> "/university-of-enchantment-and-artifice";
+"/institute-for-the-containment-of-magical-malfeasance" -> "/katchakan-empire";
 "/unary-tower" -> "/tower-of-dreams";
 "/unary-tower" -> "/library-of-aesthetics";
 "/kerogen-carp" -> "/distillation-district";
@@ -128,6 +144,9 @@ z;
 "/skarm" -> "/school-of-mystery";
 "/skarm" -> "/eggs-of-illitarus";
 "/skarm" -> "/xia-qu";
+"/energetic-prison" -> "/society-of-guardians";
+"/energetic-prison" -> "/zygrites";
+"/energetic-prison" -> "/fractious-filibuster";
 "/javelin-warshrike" -> "/unary-tower";
 "/javelin-warshrike" -> "/society-of-guardians";
 "/javelin-warshrike" -> "/katchakan-empire";
@@ -138,7 +157,11 @@ z;
 "/rhamosul-the-god-of-colour" -> "/menizance";
 "/eggs-of-illitarus" -> "/king-lef-trangour";
 "/eggs-of-illitarus" -> "/circle-market";
+"/quantus-the-god-of-uncertainty" -> "/goliath-district";
+"/quantus-the-god-of-uncertainty" -> "/rhamosul-the-god-of-colour";
+"/quantus-the-god-of-uncertainty" -> "/zygrites";
 "/paula-incident" -> "/thrallr-first-of-the-gods";
+"/paula-incident" -> "/school-of-mystery";
 "/paula-incident" -> "/aardvark";
 "/naysayer" -> "/west-gardens";
 "/naysayer" -> "/mayor-magpie";
@@ -157,6 +180,13 @@ z;
 "/xia-qu" -> "/thrallr-first-of-the-gods";
 "/xia-qu" -> "/harmonious-monks";
 "/xia-qu" -> "/eggs-of-illitarus";
+"/mayor-magpie" -> "/harmonious-monks";
+"/mayor-magpie" -> "/naysayer";
+"/mayor-magpie" -> "/atlantean-royal-family";
+"/mayor-magpie" -> "/dogmatic-order-of-science";
+"/yawning-day" -> "/school-of-mystery";
+"/yawning-day" -> "/tower-of-dreams";
+"/yawning-day" -> "/pthanics";
 "/tower-of-dreams" -> "/bright-eye-infection";
 "/tower-of-dreams" -> "/astari";
 "/tower-of-dreams" -> "/dogmatic-order-of-science";
