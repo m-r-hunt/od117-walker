@@ -4,6 +4,7 @@ a->b->c->d->e->f->g->h->i->j->k->l->m->n->o->p->q->r->s->t->u->v->w->x->y->z;
 a;
 "/atlantean-times";
 "/astari";
+"/astromancer-s-guild";
 "/atlantean-royal-family";
 "/aardvark" [color=darkorchid2,style=filled];
 }
@@ -26,9 +27,12 @@ d;
 e;
 "/energetic-prison" [color=darkorchid2,style=filled];
 "/eggs-of-illitarus" [color=cadetblue1,style=filled];
+"/eastern-gardens";
+"/embernix";
 }
 { rank=same;
 f;
+"/fleas" [color=darkorchid2,style=filled];
 "/fractious-filibuster" [color=cadetblue1,style=filled];
 }
 { rank=same;
@@ -49,7 +53,7 @@ i;
 }
 { rank=same;
 j;
-"/j-hillari";
+"/j-hillari" [color=cadetblue1,style=filled];
 "/javelin-warshrike" [color=aquamarine,style=filled];
 }
 { rank=same;
@@ -60,6 +64,7 @@ k;
 }
 { rank=same;
 l;
+"/lady-ingrid-von-dutch";
 "/library-of-aesthetics" [color=aquamarine,style=filled];
 }
 { rank=same;
@@ -70,7 +75,7 @@ m;
 { rank=same;
 n;
 "/naysayer" [color=chocolate1,style=filled];
-"/northern-gardens";
+"/northern-gardens" [color=aquamarine,style=filled];
 }
 { rank=same;
 o;
@@ -89,7 +94,8 @@ q;
 { rank=same;
 r;
 "/rhamosul-the-god-of-colour" [color=burlywood1,style=filled];
-"/rigellian-influx";
+"/rigello-god-of-change";
+"/rigellian-influx" [color=chocolate1,style=filled];
 }
 { rank=same;
 s;
@@ -112,13 +118,16 @@ u;
 { rank=same;
 v;
 "/vault-of-the-heavens" [color=brown1,style=filled];
+"/vintners" [color=burlywood1,style=filled];
 }
 { rank=same;
 w;
+"/wattaker-census";
 "/west-gardens" [color=brown1,style=filled];
 }
 { rank=same;
 x;
+"/xanthatta-institute-of-magical-music";
 "/xia-qu" [color=brown1,style=filled];
 }
 { rank=same;
@@ -127,7 +136,7 @@ y;
 }
 { rank=same;
 z;
-"/zygrites";
+"/zygrites" [color=brown1,style=filled];
 }
 "/underworks" -> "/j-hillari";
 "/underworks" -> "/kerogen-carp";
@@ -136,6 +145,9 @@ z;
 "/institute-for-the-containment-of-magical-malfeasance" -> "/hydroplegic-barrier";
 "/institute-for-the-containment-of-magical-malfeasance" -> "/university-of-enchantment-and-artifice";
 "/institute-for-the-containment-of-magical-malfeasance" -> "/katchakan-empire";
+"/j-hillari" -> "/rhamosul-the-god-of-colour";
+"/j-hillari" -> "/wattaker-census";
+"/j-hillari" -> "/society-of-guardians";
 "/unary-tower" -> "/tower-of-dreams";
 "/unary-tower" -> "/library-of-aesthetics";
 "/kerogen-carp" -> "/distillation-district";
@@ -166,6 +178,9 @@ z;
 "/naysayer" -> "/west-gardens";
 "/naysayer" -> "/mayor-magpie";
 "/naysayer" -> "/aardvark";
+"/northern-gardens" -> "/paula-incident";
+"/northern-gardens" -> "/ifiic-juvvio";
+"/northern-gardens" -> "/embernix";
 "/quintus-ignatius" -> "/rigellian-influx";
 "/quintus-ignatius" -> "/katchakan-empire";
 "/bright-eye-infection" -> "/institute-for-the-containment-of-magical-malfeasance";
@@ -177,6 +192,9 @@ z;
 "/west-gardens" -> "/king-lef-trangour";
 "/west-gardens" -> "/northern-gardens";
 "/west-gardens" -> "/bright-eye-infection";
+"/vintners" -> "/northern-gardens";
+"/vintners" -> "/byak-district";
+"/vintners" -> "/eastern-gardens";
 "/xia-qu" -> "/thrallr-first-of-the-gods";
 "/xia-qu" -> "/harmonious-monks";
 "/xia-qu" -> "/eggs-of-illitarus";
@@ -190,12 +208,21 @@ z;
 "/tower-of-dreams" -> "/bright-eye-infection";
 "/tower-of-dreams" -> "/astari";
 "/tower-of-dreams" -> "/dogmatic-order-of-science";
+"/zygrites" -> "/institute-for-the-containment-of-magical-malfeasance";
+"/zygrites" -> "/xanthatta-institute-of-magical-music";
+"/zygrites" -> "/thaumocratic-era";
 "/oshras-boutique" -> "/energetic-prison";
 "/oshras-boutique" -> "/byak-district";
 "/oshras-boutique" -> "/vault-of-the-heavens";
+"/fleas" -> "/atlantean-times";
+"/fleas" -> "/lady-ingrid-von-dutch";
+"/fleas" -> "/library-of-aesthetics";
 "/dogmatic-order-of-science" -> "/atlantean-times";
 "/dogmatic-order-of-science" -> "/quintus-ignatius";
 "/dogmatic-order-of-science" -> "/hydroplegic-barrier";
+"/rigellian-influx" -> "/vault-of-the-heavens";
+"/rigellian-influx" -> "/astromancer-s-guild";
+"/rigellian-influx" -> "/rigello-god-of-change";
 "/fractious-filibuster" -> "/kerogen-carp";
 "/fractious-filibuster" -> "/naysayer";
 "/fractious-filibuster" -> "/thaumocratic-era";
